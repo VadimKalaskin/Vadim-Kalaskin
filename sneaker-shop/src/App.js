@@ -22,22 +22,29 @@ function App() {
       <div className="overlay">
         <div className="drawer">
           <h2>Корзина</h2>
-          <div className="cart-item">
-            <img className="cart-item-img" src={nike1} />
-            <div>
-              <p>Мужские Кроссовки Nike Air Max 270</p>
-              <p>12 999 руб.</p>
+            <div className="items">
+              <div className="cart-item">
+                <img className="cart-item-img" src={nike1} />
+                <div>
+                  <p>Мужские Кроссовки Nike Air Max 270</p>
+                  <p>12 999 руб.</p>
+                  </div>
+                  <img className="close-btn" src={close} alt="close" />
               </div>
-              <img className="close-btn" src={close} alt="close" />
-          </div>
-          <div className="cart-item">
-            <img className="cart-item-img" src={nike1} />
-            <div>
-              <p>Мужские Кроссовки Nike Air Max 270</p>
-              <p>12 999 руб.</p>
+              <div className="cart-item">
+                <img className="cart-item-img" src={nike1} />
+                <div>
+                  <p>Мужские Кроссовки Nike Air Max 270</p>
+                  <p>12 999 руб.</p>
+                  </div>
+                  <img className="close-btn" src={close} alt="close" />
               </div>
-              <img className="close-btn" src={close} alt="close" />
-          </div>
+            </div>
+            <ul>
+              <li className="list-unstyled d-flex justify-content-between"><span>Итого:</span><div></div><b>24 590 руб.</b></li>
+              <li className="list-unstyled d-flex justify-content-between"><span>В т.ч. налог 5%:</span><div></div><b>2000 руб.</b></li>
+            </ul>
+            <button className="btn btn-success">Оформить заказ</button>
         </div>
       </div>
 
