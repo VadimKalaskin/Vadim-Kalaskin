@@ -34,7 +34,7 @@ function App() {
         </div>
         <div className="row">
           {arr.map((obj) => (
-            <Card name={obj.name} price={obj.price} imageUrl={obj.imageUrl} />
+            <Card name={obj.name} price={obj.price} imageUrl={obj.imageUrl} onClickPlus={()=>{console.log('Нажали плюс')}} onClickHeart={()=>{console.log('Нажали сердце')}}/>
           ))}
         </div>
       </div>
