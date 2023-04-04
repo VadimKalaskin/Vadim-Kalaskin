@@ -1,5 +1,6 @@
 import search from './img/Search.svg';
 //components
+import React from 'react';
 import Card from './components/Card';
 import Cart from './components/Cart';
 import Header from './components/Header';
@@ -39,7 +40,7 @@ function App() {
         </div>
       </div>
     </div>
-  );
-}
+  )
+};
 
 export default App;
