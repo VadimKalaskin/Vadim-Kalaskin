@@ -5,20 +5,8 @@ import Card from './components/Card';
 import Cart from './components/Cart';
 import Header from './components/Header';
 
-const arr = [
-  {
-    name: 'Мужские Кроссовки Nike Blazer Mid Suede',
-    price: 12990,
-    imageUrl: '/images/image5.png',
-  },
-  { name: 'Мужские Кроссовки Nike Air Max 270', price: 15590, imageUrl: '/images/image5-1.png' },
-  {
-    name: 'Мужские Кроссовки Nike Blazer Mid Beige',
-    price: 11990,
-    imageUrl: '/images/image5-2.png',
-  },
-  { name: 'Кроссовки Puma X Aka Boku Future Rider', price: 6890, imageUrl: '/images/image5-3.png' },
-];
+const arr = [];
+// https://642c3132208dfe25472a75cf.mockapi.io/items
 
 function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
