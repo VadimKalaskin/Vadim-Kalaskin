@@ -3,7 +3,6 @@ import close from '../../img/close.svg';
 import styles from './Cart.module.scss';
 
 function Cart({ onClickClose, items = [] }) {
-  console.log(styles);
   return (
     <div className={styles.overlay}>
       <div className={styles.drawer}>
