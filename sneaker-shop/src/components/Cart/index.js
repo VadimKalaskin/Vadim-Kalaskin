@@ -3,31 +3,31 @@ import close from '../../img/close.svg'
 
 import styles from './Cart.module.scss';
 
-function Cart() {
+function Cart(props) {
+  console.log(styles);
     return(
-
-        <div style={{display: 'none'}} className={styles.overlay}>
+        <div className={styles.overlay}>
         <div className={styles.drawer}>
           <div className="d-flex align-items-center justify-content-between mb-4 drawer-title-wrapper">
             <h2>Корзина</h2>
-            <button className={styles.closeBtn}><img src={close} alt="" /></button>
+            <button className={styles.close_btn} onClick={props.onClickClose}><img src={close} alt="" /></button>
           </div>
             <div className={styles.items}>
-              <div className={styles.cartItem}>
-                <img className={styles.cartItemImg} src={nike1} alt="nike111" />
+              <div className={styles.cart_item}>
+                <img className={styles.cart_item_img} src={nike1} alt="nike111" />
                 <div>
                   <p>Мужские Кроссовки Nike Air Max 270</p>
                   <p>12 999 руб.</p>
                   </div>
-                  <img className={styles.closeBtn} src={close} alt="close" />
+                  <img className={styles.close_btn} src={close} alt="close" />
               </div>
-              <div className="cart-item">
-                <img className="cart-item-img" src={nike1} alt="nike123" />
+              <div className={styles.cart_item}>
+                <img className={styles.cart_item_img} src={nike1} alt="nike123" />
                 <div>
                   <p>Мужские Кроссовки Nike Air Max 270</p>
                   <p>12 999 руб.</p>
                   </div>
-                  <img className={styles.closeBtn} src={close} alt="close" />
+                  <img className={styles.close_btn} src={close} alt="close" />
               </div>
             </div>
             <ul>

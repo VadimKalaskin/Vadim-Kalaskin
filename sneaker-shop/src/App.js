@@ -21,10 +21,11 @@ const arr = [
 ];
 
 function App() {
+  const [cartOpened, setCartOpened] = React.useState(false);
   return (
     <div className="container mt-5">
-      <Header />
-      <Cart />
+      <Header onClickCart={()=> {setCartOpened(true)}} />
+      {cartOpened && <Cart onClickClose={()=> {setCartOpened(false)}}/>}
       <div className="content">
         <div className="d-flex justify-content-between align-items-center">
           <h2>Все кроссовки</h2>

@@ -6,7 +6,7 @@ import user from '../../img/user.svg'
 import styles from './Header.module.scss'
 
 
-function Header () {
+function Header (props) {
     return (
         <header className={styles.header + " d-flex justify-content-between align-items-center"}>
         <div className={styles.header_col + " d-flex justify-content-center align-items-center"}>
@@ -17,10 +17,10 @@ function Header () {
           </div>
         </div>
         <div className={styles.header_col  + " d-flex justify-content-center align-items-center"}>
-          <div className={styles.header_cart}>
+          <div className={styles.header_cart} onClick={props.onClickCart}>
             <img src={cart} alt="cart" />
           </div>
-          <div className={styles.header_price}><span>12500</span> руб.</div>
+          <div className={styles.header_price} onClick={props.onClickCart}><span>12500</span> руб.</div>
           <div className={styles.header_heart}>
             <img src={heart} alt="Heart" />
           </div>

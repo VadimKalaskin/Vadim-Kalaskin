@@ -1,11 +1,12 @@
+import React from 'react';
+import styles from './Card.module.scss';
+
 import addToHeart from '../../img/addToHeart.svg';
 import addedToHeart from '../../img/addedToHeart.svg';
 
 import addToCart from '../../img/addToCart.svg';
 import addedToCart from '../../img/addedToCart.svg';
 
-import styles from './Card.module.scss';
-import React from 'react';
 
 function Card(props) {
   const [isAdded, setIsAdded] = React.useState(false);
