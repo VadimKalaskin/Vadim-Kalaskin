@@ -5,6 +5,9 @@ import addToCart from '../img/addToCart.svg';
 import addedToCart from '../img/addedToCart.svg';
 
 function Card(props) {
+ const onClickPlus = () => {
+      alert(props.price);
+    }
   return (
     <div className="item_card col-lg-3 col-md-4 col-sm-6 col-xs-12">
       <img className="like" src={addToHeart} alt="Unliked" />
@@ -15,7 +18,7 @@ function Card(props) {
           <span>ЦЕНА:</span>
           <span>{props.price} руб.</span>
         </div>
-        <button className="item_addToCart btn">
+        <button onClick={onClickPlus} className="item_addToCart btn">
           <img src={addToCart} alt="Добавить в корзину" />
         </button>
       </div>
