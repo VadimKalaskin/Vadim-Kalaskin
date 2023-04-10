@@ -3,11 +3,13 @@ import close from './img/close.svg';
 
 //components
 import React from 'react';
+import axios from 'axios';
 import Card from './components/Card';
 import Cart from './components/Cart';
 import Header from './components/Header';
 
 // https://642c3132208dfe25472a75cf.mockapi.io/items
+// https://6432452bd0127730d2cf7e01.mockapi.io/cart
 
 function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
@@ -20,19 +22,17 @@ function App() {
   }
 
   React.useEffect(() => {
-    fetch('https://642c3132208dfe25472a75cf.mockapi.io/items')
-      .then((res) => {
-        return res.json();
-      })
-      .then((json) => setItems(json));
+    axios.get('https://642c3132208dfe25472a75cf.mockapi.io/items').then((res) => setItems(res.data));
+    axios.get('https://6432452bd0127730d2cf7e01.mockapi.io/cart').then((res) => setCartItems(res.data));
   }, []);
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 mb-5">
       <Header
         onClickCart={() => {
           setCartOpened(true);
         }}
+        totalPrice = {cartItems.reduce((acc, item) => acc + item.price, 0)}
       />
       {cartOpened && (
         <Cart
@@ -40,6 +40,11 @@ function App() {
           onClickClose={() => {
             setCartOpened(false);
           }}
+          onDelete ={(id) => {
+            axios.delete(`https://6432452bd0127730d2cf7e01.mockapi.io/cart/${id}`);
+            setCartItems((prev) => prev.filter((item) => item.id !== id));
+          }}
+          totalPrice = {cartItems.reduce((acc, item) => acc + item.price, 0)}
         />
       )}
       <div className="content">
@@ -60,6 +65,7 @@ function App() {
               imageUrl={obj.imageUrl}
               onPlus={(item) => {
                 setCartItems((prev) => [...prev, item]);
+                axios.post('https://6432452bd0127730d2cf7e01.mockapi.io/cart', {"name" : obj.name, "price" : obj.price, "imageUrl" : obj.imageUrl});
               }}
             />
           ))}

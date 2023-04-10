@@ -2,7 +2,7 @@ import close from '../../img/close.svg';
 
 import styles from './Cart.module.scss';
 
-function Cart({ onClickClose, items = [] }) {
+function Cart({ onClickClose, items = [], onDelete, totalPrice = 0 }) {
   return (
     <div className={styles.overlay}>
       <div className={styles.drawer}>
@@ -20,7 +20,7 @@ function Cart({ onClickClose, items = [] }) {
                 <p>{obj.name}</p>
                 <p>{`${obj.price} руб.`}</p>
               </div>
-              <img className={styles.close_btn} src={close} alt="close" />
+              <img className={styles.close_btn} src={close} alt="close" onClick={() => onDelete(obj.id)} />
             </div>
           ))}
         </div>
@@ -28,12 +28,12 @@ function Cart({ onClickClose, items = [] }) {
           <li className="list-unstyled d-flex justify-content-between">
             <span>Итого:</span>
             <div></div>
-            <b>24 590 руб.</b>
+            <b>{totalPrice} руб.</b>
           </li>
           <li className="list-unstyled d-flex justify-content-between">
             <span>В т.ч. налог 5%:</span>
             <div></div>
-            <b>2000 руб.</b>
+            <b>{totalPrice / 100 * 5} руб.</b>
           </li>
         </ul>
         <button className={styles.btnSuccess + ' btn btn-success'}>Оформить заказ</button>

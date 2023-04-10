@@ -20,7 +20,7 @@ function Header (props) {
           <div className={styles.header_cart} onClick={props.onClickCart}>
             <img src={cart} alt="cart" />
           </div>
-          <div className={styles.header_price} onClick={props.onClickCart}><span>12500</span> руб.</div>
+          <div className={styles.header_price} onClick={props.onClickCart}><span>{props.totalPrice}</span> руб.</div>
           <div className={styles.header_heart}>
             <img src={heart} alt="Heart" />
           </div>
