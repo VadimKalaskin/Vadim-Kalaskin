@@ -1,22 +1,26 @@
 import React from 'react';
+import axios from 'axios';
+
 import styles from './Card.module.scss';
 
 import addToHeart from '../../img/addToHeart.svg';
 import addedToHeart from '../../img/addedToHeart.svg';
-
 import addToCart from '../../img/addToCart.svg';
 import addedToCart from '../../img/addedToCart.svg';
+
 
 function Card({ name, imageUrl, price, onPlus }) {
   const [isAdded, setIsAdded] = React.useState(false);
   const [isFavorite, setIsFavorite] = React.useState(false);
 
+
   const onClickPlus = () => {
     setIsAdded(!isAdded);
     onPlus({ name, imageUrl, price });
   };
-  const onClickHeart = () => {
+  const onClickFavorite = () => {
     setIsFavorite(!isFavorite);
+    axios.post('https://6432452bd0127730d2cf7e01.mockapi.io/favorites', {name, imageUrl, price});
   };
 
   return (
@@ -25,7 +29,7 @@ function Card({ name, imageUrl, price, onPlus }) {
         className={styles.like}
         src={!isFavorite ? addToHeart : addedToHeart}
         alt="Unliked"
-        onClick={onClickHeart}
+        onClick={() => onClickFavorite()}
       />
       <img className={styles.card_img} src={imageUrl} alt={name} />
       <h4 className={styles.card_title}>{name}</h4>
