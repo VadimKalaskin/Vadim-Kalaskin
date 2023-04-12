@@ -20,7 +20,6 @@ function App() {
   const [cartItems, setCartItems] = React.useState([]);
   const [searchValue, setSearchValue] = React.useState('');
 
-
   const onChangeSearchInput = (e) => {
     setSearchValue(e.target.value);
   };
@@ -35,32 +34,47 @@ function App() {
   }, []);
 
   return (
-      <div className="container mt-5 mb-5">
-          <Header
-              onClickCart={() => {
-                setCartOpened(true);
-              }}
-              totalPrice={cartItems.reduce((acc, item) => acc + item.price, 0)}
+    <div className="container mt-5 mb-5">
+      <Header
+        onClickCart={() => {
+          setCartOpened(true);
+        }}
+        totalPrice={cartItems.reduce((acc, item) => acc + item.price, 0)}
+      />
+      {cartOpened && (
+        <Cart
+          items={cartItems}
+          onClickClose={() => {
+            setCartOpened(false);
+          }}
+          onDelete={(id) => {
+            axios.delete(`https://6432452bd0127730d2cf7e01.mockapi.io/cart/${id}`);
+            setCartItems((prev) => prev.filter((item) => item.id !== id));
+          }}
+          totalPrice={cartItems.reduce((acc, item) => acc + item.price, 0)}
+        />
+      )}
+      <Routes>
+        <Route path="favorites" element={<Favorites />} />
+        <Route path="*" element={<h1> Not Found or You do not have permission.</h1>} />
+        <Route
+          path="/"
+          exact
+          element={
+            <Home
+              Card={Card}
+              items={items}
+              setCartItems={setCartItems}
+              search={search}
+              close={close}
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+              onChangeSearchInput={onChangeSearchInput}
             />
-        {cartOpened && (
-          <Cart
-            items={cartItems}
-            onClickClose={() => {
-              setCartOpened(false);
-            }}
-            onDelete={(id) => {
-              axios.delete(`https://6432452bd0127730d2cf7e01.mockapi.io/cart/${id}`);
-              setCartItems((prev) => prev.filter((item) => item.id !== id));
-            }}
-            totalPrice={cartItems.reduce((acc, item) => acc + item.price, 0)}
-          />
-        )}
-        <Routes>
-          <Route path="/" exact element={<Home Card={Card} items={items} setCartItems={setCartItems} search={search} close={close} searchValue={searchValue} setSearchValue={setSearchValue} onChangeSearchInput={onChangeSearchInput} />} />
-          <Route path="/favorites" exact element={<Favorites />}/>
-          <Route path="*" element={<h1> Not Found or You do not have permission.</h1>}/>
-        </Routes>
-      </div>
+          }
+        />
+      </Routes>
+    </div>
   );
 }
 
