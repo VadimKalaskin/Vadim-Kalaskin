@@ -1,15 +1,3 @@
-// const mainItems = document.querySelectorAll('.main-item');
-
-// mainItems.forEach(mainItem => {
-//   mainItem.querySelectorAll('button').forEach(button => {
-//     button.addEventListener('click', () => {
-//       const moreInfo = mainItem.querySelector('.more-info');
-//       moreInfo.classList.toggle('active');
-//       moreInfo.style.maxHeight = moreInfo.classList.contains('active') ? `${moreInfo.scrollHeight}px` : '0';
-//     });
-//   });
-// });
-
 const mainItems = document.querySelectorAll('.main-item');
 
 mainItems.forEach(mainItem => {
@@ -25,4 +13,18 @@ mainItems.forEach(mainItem => {
     })
   });
 });
+
+const buttonPrincipes = document.querySelector('.principesBtn');
+const principes = buttonPrincipes.closest('.container-fluid');
+const moreInfo = principes.querySelectorAll('.more-info');
+
+buttonPrincipes.addEventListener('click', () => {
+  buttonPrincipes.classList.toggle('active');
+  principes.classList.toggle('active');
+
+  moreInfo.forEach(block => {
+    block.classList.toggle('active');
+    block.style.maxHeight = block.classList.contains('active') ? `${block.scrollHeight}px` : '0';
+  })
+})
 

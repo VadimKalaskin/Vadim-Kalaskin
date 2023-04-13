@@ -15,17 +15,22 @@
   background: #fff;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  display: flex;
-  flex-direction: column;
 }
 .overlay .drawer button {
   border: none;
 }
+.overlay .drawer .itemsWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
 .overlay .drawer .items {
   flex: 1;
+  overflow: auto;
 }
 .overlay .drawer ul {
   width: 85%;
+  margin-top: 20px;
 }
 .overlay .drawer ul li {
   margin-left: -20px;
@@ -43,7 +48,7 @@
 }
 .overlay .drawer .cart_item {
   display: flex;
-  border: 1px solid #F3F3F3;
+  border: 1px solid #f3f3f3;
   border-radius: 20px;
   padding: 10px;
   margin-bottom: 10px;
@@ -60,16 +65,16 @@
   height: 70px;
   margin-right: 20px;
 }
-.overlay .drawer .cart_item div {
+.overlay .drawer .cart_item div.space {
   margin-right: 12px;
   font-size: 14px;
   padding: 0;
 }
-.overlay .drawer .cart_item div p:last-child {
+.overlay .drawer .cart_item div.space p:last-child {
   font-weight: 700;
 }
 .overlay .drawer .btnSuccess {
-  background: #9DD558;
+  background: #9dd558;
   border-radius: 18px;
   border: none;
   padding: 10px;
@@ -80,4 +85,27 @@
 }
 .overlay .drawer .btnSuccess:hover {
   background: #85c832;
+}
+
+.cart_empty {
+  font-size: 60px;
+  flex: 1;
+  text-align: center;
+  color: #9dd558;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+.cart_empty h2 {
+  flex: 1;
+}
+.cart_empty .cart_emptyButton {
+  margin-top: 50px;
+  cursor: pointer;
+  padding: 20px;
+  background-color: #9dd558;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 10px;
 }/*# sourceMappingURL=Cart.module.css.map */

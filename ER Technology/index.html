@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./style/style.css">
 
   <title>ER Technology</title>
@@ -20,12 +21,12 @@
           <li>Контакты</li>
         </ul></div>
         <div class="header_search">
+          <input type="text" name="search" id="search" class="search-input">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="24" height="24" fill="none"/>
             <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M20.9984 20.9999L16.6484 16.6499" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>            
-          <input type="text" name="search" id="search" class="search-input">
           <div class="header_lang"><a href="#">RU</a><span> / </span><a href="#"> EN</a></div>
         </div>
       </div>
@@ -33,21 +34,24 @@
   </header>
 
 <main class="main">
-  <div class="container">
     <div class="main-wrapper">
-      <div class="main-banner">
-        <img src="./img/Header-banner.jpg" alt="">
-        <div class="banner-text">
-          <h3>ER technology</h3>
-          <p>Холдинговая компания импортных и экспортных операций.
-            Обладаем экспертизой подбора технических решений: оборудования, запасных частей 
-            и комплектующих. Обеспечиваем надежное проведение сделки от момента контакта 
-            с поставщиком до ввоза и таможенного оформления товара на территории РФ
-            Доставляем на склад заказчика продукцию, оформленную в полном соответствие 
-            с требованиями российского таможенного законодательства и в сжатые сроки.</p>
-            <button>Подробнее</button>
+      <div class="container-fluid p-0">
+        <div class="main-banner">
+          <img src="./img/Header-banner.jpg" alt="">
+          <div class="banner-text">
+            <h3>ER technology</h3>
+            <p>Холдинговая компания импортных и экспортных операций.
+              Обладаем экспертизой подбора технических решений: оборудования, запасных частей 
+              и комплектующих. Обеспечиваем надежное проведение сделки от момента контакта 
+              с поставщиком до ввоза и таможенного оформления товара на территории РФ
+              Доставляем на склад заказчика продукцию, оформленную в полном соответствие 
+              с требованиями российского таможенного законодательства и в сжатые сроки.</p>
+              <button>Подробнее</button>
+          </div>
         </div>
       </div>
+  <div class="container">
+
       <div class="main-items">
         <div class="main-item">
           <button><div class="btn-wrapper"><div class="plusminus"></div></div></button>
@@ -237,14 +241,48 @@
           </div>
         </div>
       </div>
-      
+
     </div>
+
+      
+      <div class="principes">
+        <div class="container-fluid p-0">
+        <div class="principes_item">
+          <button><div class="btn-wrapper"><div class="plusminus principesBtn"></div></div></button>
+          <img src="./img/principes1.png" alt="">
+          <div class="principes_item_text">
+            <h5>Принципы</h5>
+            <p>Быстрая адаптация к меняющимся условиям и проактивная позиция по разработке вариантов закупки, оплаты и доставки товаров, характеризует нашу компанию</p>
+          
+            <p class="more-info">Благодаря надежности наших решений и росту количества успешно решенных задач, наша компания динамично растет, развивая присутствие в различных отраслях и открывая новые рынки. Не проводя рекламных компаний, количество обращений и запросов увеличивается ежедневно.</p>
+            <p class="more-info">В своей работе мы руководствуемся следующими принципами:</p>
+          </div>
+            <div class="info-block more-info" >
+              <div class="central-info" style="flex-basis: 32%"><img src="./img/Contract.svg" alt="Contract"><p>Выполнить условия контракта не зависимо от меняющихся условий</p></div>
+              <div class="central-info" style="flex-basis: 32%"><img src="./img/employee.png" alt="Contract"><p>Заработать и сохранить доверие потребителя</p></div>
+              <div class="central-info" style="flex-basis: 32%"><img src="./img/handshake.svg" alt="handshake"><p>Выстроить долговременные доверительные отношения с нашими клиентами</p></div>
+            </div>
+        </div>
+      </div>
+
+        <div class="container-fluid p-0">
+        <div class="principes_item">
+          <img src="./img/principes2.png" alt="">
+          <div class="principes_item_text">
+            <h5>Команда</h5>
+            <p>Наша команда профессионалов с успешным опытом работы в федеральных компаниях и знанием международного законодательства в сфере регулирования бизнеса и торговли, обеспечивает комплексное решение задач от подбора оптимального логистического решения до поставки оборудования.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
   </div>
 </main>
 
 <script src="./script/search.js"></script>
 <script src="./script/accordion.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

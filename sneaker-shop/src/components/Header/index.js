@@ -24,11 +24,11 @@ function Header (props) {
             <img src={cart} alt="cart" />
           </div>
           <div className={styles.header_price} onClick={props.onClickCart}><span>{props.totalPrice}</span> руб.</div>
-          <Link to={'/favorites'}>
             <div className={styles.header_heart}>
+          <Link to={'/favorites'}>
               <img src={heart} alt="Heart" />
-            </div>
           </Link>
+            </div>
           <div className="header_user">
             <img src={user} alt="user" />
           </div>

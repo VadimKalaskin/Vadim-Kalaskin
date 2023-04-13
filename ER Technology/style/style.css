@@ -41,17 +41,11 @@
   src: url("../fonts/OnestThin.woff") format("woff");
   font-weight: 100;
 }
-.container {
-  width: 1280px;
-  margin: 0 auto;
-}
-
 .header_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 90px;
-  width: 1021px;
   margin: 0 auto;
 }
 
@@ -91,6 +85,8 @@
 .header_search {
   display: flex;
   gap: 24px;
+  position: relative;
+  width: 250px;
 }
 .header_search input.search-input {
   width: 0;
@@ -113,8 +109,10 @@
 }
 .header_search svg {
   cursor: pointer;
-  position: relative;
-  left: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  left: 5px;
   z-index: 2;
 }
 .header_search svg path {
@@ -127,6 +125,7 @@
 .header_lang {
   display: flex;
   opacity: 0.3;
+  transition: all 0.2s ease-in-out;
 }
 .header_lang a {
   text-decoration: none;
@@ -139,13 +138,18 @@
   margin-right: 4px;
 }
 .header_lang.displaynone {
-  display: none;
+  width: 0;
+  opacity: 0;
 }
 
 .main-banner {
   position: relative;
   display: flex;
   justify-content: center;
+}
+.main-banner img {
+  width: calc(100% + 40px);
+  height: auto;
 }
 .main-banner .banner-text {
   position: absolute;
@@ -180,7 +184,6 @@
 }
 
 .main-items {
-  width: 1000px;
   margin: 72px auto;
 }
 
@@ -201,16 +204,20 @@
 .main-item:hover .item-text h4 {
   color: #1889C5;
 }
-.main-item button {
+.main-item .item-img img {
+  float: left;
+}
+
+button {
   background: none;
   border: none;
   border-radius: 50%;
   cursor: pointer;
   position: absolute;
   top: 24px;
-  right: 24px;
+  right: 64px;
 }
-.main-item button .btn-wrapper {
+button .btn-wrapper {
   background-color: #1889C5;
   width: 42px;
   height: 42px;
@@ -219,20 +226,20 @@
   justify-content: center;
   border-radius: 50%;
 }
-.main-item button .plusminus {
+button .plusminus {
   position: relative;
   width: 14px;
   height: 14px;
   cursor: pointer;
 }
-.main-item button .plusminus.active:before {
+button .plusminus.active:before {
   transform: translatey(-50%) rotate(-90deg);
   opacity: 0;
 }
-.main-item button .plusminus.active:after {
+button .plusminus.active:after {
   transform: translatey(-50%) rotate(0);
 }
-.main-item button .plusminus:before, .main-item button .plusminus:after {
+button .plusminus:before, button .plusminus:after {
   content: "";
   display: block;
   background-color: #fff;
@@ -244,25 +251,18 @@
   width: 100%;
   height: 2px;
 }
-.main-item button .plusminus:before {
+button .plusminus:before {
   transform: translatey(-50%);
 }
-.main-item button .plusminus:after {
+button .plusminus:after {
   transform: translatey(-50%) rotate(90deg);
-}
-.main-item .item-img img {
-  float: left;
 }
 
 .item-text {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  padding: 45px 24px 56px 24px;
-}
-.item-text > p {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 45px 110px 56px 110px;
 }
 .item-text h4 {
   font-size: 32px;
@@ -270,8 +270,6 @@
   font-weight: 400;
   margin-bottom: 27px;
   transition: 0.15s all ease-in-out;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 .item-text p:not(:last-child) {
   margin-bottom: 24px;
@@ -282,18 +280,20 @@
 .item-text ul {
   margin-bottom: 20px;
   padding-left: 20px;
-  margin-left: 30px;
 }
 .item-text ul li p {
   padding: 0;
+  margin-bottom: 10px;
 }
 .item-text .more-info {
   max-height: 0;
+  opacity: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .item-text .more-info.active {
   margin-top: 35px;
+  opacity: 1;
 }
 .item-text .more-info p {
   width: 100%;
@@ -371,4 +371,45 @@
   line-height: 21px;
   color: #3694E7;
   padding: 0;
+}
+
+.principes .container-fluid {
+  background-color: #133457;
+  color: #fff;
+  transition: 0.2s all ease-in-out;
+}
+.principes .container-fluid.active {
+  background-color: #3694E7;
+}
+.principes .principes_item {
+  position: relative;
+  width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  gap: 105px;
+  align-items: flex-start;
+}
+.principes .principes_item .principes_item_text {
+  padding-right: 148px;
+}
+.principes .principes_item .principes_item_text h5 {
+  font-weight: 300;
+  font-size: 47px;
+  line-height: 60px;
+  margin-top: 80px;
+}
+.principes .principes_item .principes_item_text p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+}
+.principes .principes_item .principes_item_text .more-info {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.principes .principes_item .principes_item_text .more-info.active {
+  margin-top: 35px;
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

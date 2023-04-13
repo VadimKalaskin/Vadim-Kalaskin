@@ -9,9 +9,9 @@ import addToCart from '../../img/addToCart.svg';
 import addedToCart from '../../img/addedToCart.svg';
 
 
-function Card({ name, imageUrl, price, onPlus }) {
+function Card({ name, imageUrl, price, onPlus, favorited = false }) {
   const [isAdded, setIsAdded] = React.useState(false);
-  const [isFavorite, setIsFavorite] = React.useState(false);
+  const [isFavorite, setIsFavorite] = React.useState(favorited);
 
 
   const onClickPlus = () => {
@@ -21,6 +21,7 @@ function Card({ name, imageUrl, price, onPlus }) {
   const onClickFavorite = () => {
     setIsFavorite(!isFavorite);
     axios.post('https://6432452bd0127730d2cf7e01.mockapi.io/favorites', {name, imageUrl, price});
+    
   };
 
   return (

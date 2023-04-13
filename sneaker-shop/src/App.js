@@ -19,6 +19,8 @@ function App() {
   const [items, setItems] = React.useState([]);
   const [cartItems, setCartItems] = React.useState([]);
   const [searchValue, setSearchValue] = React.useState('');
+  const [favoriteItems, setFavoriteItems] = React.useState([]);
+
 
   const onChangeSearchInput = (e) => {
     setSearchValue(e.target.value);
@@ -31,6 +33,9 @@ function App() {
     axios
       .get('https://6432452bd0127730d2cf7e01.mockapi.io/cart')
       .then((res) => setCartItems(res.data));
+    axios
+      .get('https://6432452bd0127730d2cf7e01.mockapi.io/favorites')
+      .then((res) => setFavoriteItems(res.data));
   }, []);
 
   return (
@@ -56,7 +61,7 @@ function App() {
         )}
         <Routes>
           <Route path="/" exact element={<Home Card={Card} items={items} setCartItems={setCartItems} search={search} close={close} searchValue={searchValue} setSearchValue={setSearchValue} onChangeSearchInput={onChangeSearchInput} />} />
-          <Route path="/favorites" exact element={<Favorites />}/>
+          <Route path="/favorites" exact element={<Favorites favoriteItems={favoriteItems} cartItems={cartItems} setCartItems={setCartItems} />}/>
           <Route path="*" element={<h1> Not Found or You do not have permission.</h1>}/>
         </Routes>
       </div>
