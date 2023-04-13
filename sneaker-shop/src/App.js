@@ -56,9 +56,9 @@ function App() {
           />
         )}
         <Routes>
-          <Route path="/" exact element={<Home Card={Card} items={items} setCartItems={setCartItems} search={search} close={close} searchValue={searchValue} setSearchValue={setSearchValue} onChangeSearchInput={onChangeSearchInput} />} />
-          <Route path="/favorites" exact element={<Favorites />}/>
-          <Route path="*" element={<h1> Not Found or You do not have permission.</h1>}/>
+          <Route path="/123" exact element={<Home Card={Card} items={items} setCartItems={setCartItems} search={search} close={close} searchValue={searchValue} setSearchValue={setSearchValue} onChangeSearchInput={onChangeSearchInput} />} />
+          {/* <Route path="/favorites" exact element={<Favorites />}/>
+          <Route path="*" element={<h1> Not Found or You do not have permission.</h1>}/> */}
         </Routes>
       </div>
   );
