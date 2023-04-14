@@ -55,11 +55,12 @@
   padding-bottom: 15px;
 }
 
-.header_menu ul {
+.header_menu > ul {
   display: flex;
   gap: 28px;
+  align-items: center;
 }
-.header_menu li {
+.header_menu > ul > li {
   float: left;
   text-transform: uppercase;
   font-weight: 400;
@@ -68,18 +69,32 @@
   position: relative;
   list-style-type: none;
 }
-.header_menu li.dropdown::after {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  background: url("../img/chevron-down.png");
-  background-size: contain;
-  background-position: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -14px;
+.header_menu > ul > li a {
+  text-decoration: none;
+  color: #000000;
+}
+.header_menu .dropdown .btn {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+.header_menu .dropdown button.btn:active {
+  outline: none !important;
+  border: none !important;
+}
+.header_menu .dropdown button.btn.show {
+  outline: none !important;
+  border: none !important;
+  color: #3694E7;
+}
+.header_menu .dropdown button.btn {
+  outline: none !important;
+  border: none !important;
+}
+
+.nav-link {
+  text-transform: uppercase !important;
 }
 
 .header_search {
@@ -122,6 +137,11 @@
   stroke: #3694E7;
 }
 
+.dropdown-menu {
+  border: none;
+  box-shadow: 0px 4px 27px rgba(21, 21, 21, 0.08);
+}
+
 .header_lang {
   display: flex;
   opacity: 0.3;
@@ -132,7 +152,6 @@
   color: #000000;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
 }
 .header_lang * {
   margin-right: 4px;
@@ -207,8 +226,7 @@
 .main-item .item-img img {
   float: left;
 }
-
-button {
+.main-item button {
   background: none;
   border: none;
   border-radius: 50%;
@@ -217,7 +235,7 @@ button {
   top: 24px;
   right: 64px;
 }
-button .btn-wrapper {
+.main-item button .btn-wrapper {
   background-color: #1889C5;
   width: 42px;
   height: 42px;
@@ -226,20 +244,20 @@ button .btn-wrapper {
   justify-content: center;
   border-radius: 50%;
 }
-button .plusminus {
+.main-item button .plusminus {
   position: relative;
   width: 14px;
   height: 14px;
   cursor: pointer;
 }
-button .plusminus.active:before {
+.main-item button .plusminus.active:before {
   transform: translatey(-50%) rotate(-90deg);
   opacity: 0;
 }
-button .plusminus.active:after {
+.main-item button .plusminus.active:after {
   transform: translatey(-50%) rotate(0);
 }
-button .plusminus:before, button .plusminus:after {
+.main-item button .plusminus:before, .main-item button .plusminus:after {
   content: "";
   display: block;
   background-color: #fff;
@@ -251,10 +269,10 @@ button .plusminus:before, button .plusminus:after {
   width: 100%;
   height: 2px;
 }
-button .plusminus:before {
+.main-item button .plusminus:before {
   transform: translatey(-50%);
 }
-button .plusminus:after {
+.main-item button .plusminus:after {
   transform: translatey(-50%) rotate(90deg);
 }
 
@@ -373,6 +391,22 @@ button .plusminus:after {
   padding: 0;
 }
 
+.principes .container .about {
+  display: flex;
+}
+.principes .container .about h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 47px;
+  line-height: 60px;
+  flex: 1 0 330px;
+}
+.principes .container .about p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  padding-right: 110px;
+}
 .principes .container-fluid {
   background-color: #133457;
   color: #fff;
@@ -385,18 +419,66 @@ button .plusminus:after {
   position: relative;
   width: 1320px;
   margin: 0 auto;
+  min-height: 325px;
+}
+.principes .principes_item button {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 64px;
+}
+.principes .principes_item button .btn-wrapper {
+  background-color: #1889C5;
+  width: 42px;
+  height: 42px;
   display: flex;
-  gap: 105px;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.principes .principes_item button .plusminus {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.principes .principes_item button .plusminus.active:before {
+  transform: translatey(-50%) rotate(-90deg);
+  opacity: 0;
+}
+.principes .principes_item button .plusminus.active:after {
+  transform: translatey(-50%) rotate(0);
+}
+.principes .principes_item button .plusminus:before, .principes .principes_item button .plusminus:after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 1px;
+  top: 50%;
+  left: 0;
+  transition: 0.4s;
+  width: 100%;
+  height: 2px;
+}
+.principes .principes_item button .plusminus:before {
+  transform: translatey(-50%);
+}
+.principes .principes_item button .plusminus:after {
+  transform: translatey(-50%) rotate(90deg);
 }
 .principes .principes_item .principes_item_text {
   padding-right: 148px;
+  padding-top: 79px;
+  padding-left: 170px;
 }
 .principes .principes_item .principes_item_text h5 {
   font-weight: 300;
   font-size: 47px;
   line-height: 60px;
-  margin-top: 80px;
 }
 .principes .principes_item .principes_item_text p {
   font-weight: 300;
@@ -406,10 +488,80 @@ button .plusminus:after {
 .principes .principes_item .principes_item_text .more-info {
   max-height: 0;
   opacity: 0;
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+}
+.principes .principes_item .principes_item_text .more-info .central-info {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: none;
+}
+.principes .principes_item .principes_item_text .more-info .central-info p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
 }
 .principes .principes_item .principes_item_text .more-info.active {
   margin-top: 35px;
   opacity: 1;
+}
+
+.branches .container {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.branches .container .branch {
+  height: 374px;
+  width: 658px;
+  color: #fff;
+  padding: 52px 64px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.branches .container .branch p:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+}
+.branches .container .branch p:last-child {
+  font-weight: 500;
+  font-size: 47px;
+  line-height: 60px;
+}
+.branches .branch:nth-child(1) {
+  background-image: linear-gradient(#3694E7 0% 50%, transparent 70%), url("../img/branches/usa.jpg");
+}
+.branches .branch:nth-child(2) {
+  background-image: linear-gradient(#3694E7 0% 50%, transparent 70%), url("../img/branches/germany.jpg");
+}
+.branches .branch:nth-child(3) {
+  background-image: linear-gradient(#3694E7 0% 50%, transparent 70%), url("../img/branches/china.jpg");
+}
+.branches .branch:nth-child(4) {
+  background-image: linear-gradient(#3694E7 0% 50%, transparent 70%), url("../img/branches/korea.jpg");
+}
+.branches .branch:nth-child(5) {
+  background-image: linear-gradient(#3694E7 0% 50%, transparent 70%), url("../img/branches/india.jpg");
+}
+.branches .branch:nth-child(6) {
+  background-image: linear-gradient(#3694E7 0% 50%, transparent 70%), url("../img/branches/kazakstan.jpg");
+}
+.branches .branch:nth-child(7) {
+  background-image: linear-gradient(#3694E7 0% 50%, transparent 70%), url("../img/branches/uzbekistan.jpg");
+}
+.branches .branch:nth-child(8) {
+  background-image: linear-gradient(#3694E7 0% 50%, transparent 70%), url("../img/branches/turkey.jpg");
+}
+
+@media all and (min-width: 992px) {
+  .dropdown-menu {
+    display: none;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */

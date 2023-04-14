@@ -12,14 +12,36 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header_wrapper">
+      <!-- <div class="header_wrapper">
         <div class="header_logo"><img src="./img/Header-logo.png" alt="Logo"></div>
-        <div class="header_menu"><ul>
-          <li class="dropdown">Услуги</li>
-          <li class="dropdown">О компании</li>
-          <li>Филиалы</li>
-          <li>Контакты</li>
-        </ul></div>
+        <div class="header_menu">
+          <ul>
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Услуги
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" id="ancor">Разработка решений</a></li>
+                <li><a class="dropdown-item" href="#" id="ancor">Доставка</a></li>
+                <li><a class="dropdown-item" href="#" id="ancor">Таможенное оформление</a></li>
+                <li><a class="dropdown-item" href="#" id="ancor">Сертификация</a></li>
+                <li><a class="dropdown-item" href="#" id="ancor">ВЭД консалтинг</a></li>
+
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="ancor">
+                О компании
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" id="ancor">Принципы</a></li>
+                <li><a class="dropdown-item" href="#" id="ancor">Команда</a></li>
+              </ul>
+            </div>
+            <li><a href="#" id="ancor">Филиалы</a></li>
+            <li><a href="#" id="ancor">Контакты</a></li>
+          </ul>
+        </div>
         <div class="header_search">
           <input type="text" name="search" id="search" class="search-input">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +51,61 @@
             </svg>            
           <div class="header_lang"><a href="#">RU</a><span> / </span><a href="#"> EN</a></div>
         </div>
-      </div>
+      </div> -->
+
+      <nav class="navbar navbar-expand-lg p-0">
+        <div class="container-fluid">
+          <a class="navbar-brand p-0" href="#">
+            <img src="./img/Header-logo.png" alt="ER Technology">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Услуги
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#" id="ancor">Разработка решений</a></li>
+                  <li><a class="dropdown-item" href="#" id="ancor">Доставка</a></li>
+                  <li><a class="dropdown-item" href="#" id="ancor">Таможенное оформление</a></li>
+                  <li><a class="dropdown-item" href="#" id="ancor">Сертификация</a></li>
+                  <li><a class="dropdown-item" href="#" id="ancor">ВЭД консалтинг</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="ancor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  О компании
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#" id="ancor">Принципы</a></li>
+                  <li><a class="dropdown-item" href="#" id="ancor">Команда</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="ancor">Филиалы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="ancor">Контакты</a>
+              </li>
+            </ul>
+            <form class="d-flex header_search" role="search">
+              <input type="text" name="search" id="search" class="search-input">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" fill="none"/>
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.9984 20.9999L16.6484 16.6499" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>            
+                <div class="header_lang"><a href="#">RU</a><span> / </span><a href="#"> EN</a></div>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
     </div>
   </header>
 
@@ -53,7 +129,7 @@
   <div class="container">
 
       <div class="main-items">
-        <div class="main-item">
+        <div class="main-item" id="navElement">
           <button><div class="btn-wrapper"><div class="plusminus"></div></div></button>
           <div class="item-img"><img src="./img/main-robot-1.png" alt=""></div>
           <div class="item-text">
@@ -79,7 +155,7 @@
           </div>
 
         </div>
-        <div class="main-item">
+        <div class="main-item" id="navElement">
           <button><div class="btn-wrapper"><div class="plusminus"></div></div></button>
           <div class="item-img"><img src="./img/main-robot-2.png" alt=""></div>
           <div class="item-text">
@@ -123,7 +199,7 @@
             
           </div>
         </div>
-        <div class="main-item">
+        <div class="main-item" id="navElement">
           <button><div class="btn-wrapper"><div class="plusminus"></div></div></button>
           <div class="item-img"><img src="./img/main-robot-3.png" alt=""></div>
           <div class="item-text">
@@ -133,8 +209,8 @@
             
               <p class="more-info">
                 Таможенное оформление товаров имеет ряд особенностей, 
-а формат работы с таможней не предполагает живого диалога, в котором можно уточнить нюансы, пояснить, что имелось в виду и защитить свою позицию. От выбранной процедуры будет зависеть начисление или неначисление таможенных пошлин, НДС, применение мер нетарифного регулирования и пр. 
-Мы можем выбрать подходящую под вашу задачу таможенную процедуру и провести её в соответствии с требованиями законодательства. Произошедшие изменения правил ввоза товаров нашли выражения в двух главных тенденциях:
+                а формат работы с таможней не предполагает живого диалога, в котором можно уточнить нюансы, пояснить, что имелось в виду и защитить свою позицию. От выбранной процедуры будет зависеть начисление или неначисление таможенных пошлин, НДС, применение мер нетарифного регулирования и пр. 
+                Мы можем выбрать подходящую под вашу задачу таможенную процедуру и провести её в соответствии с требованиями законодательства. Произошедшие изменения правил ввоза товаров нашли выражения в двух главных тенденциях:
               </p>
               <div class="info-block more-info" >
                 <div style="flex-basis: 49%"><img src="./img/arrow-up.png" alt=""><p class="block_text"><b>Упрощение технического регулирования и правил оформления разрешительных документов</b> согласно постановлению Правительства РФ от 12.03.2022 № 353 
@@ -151,13 +227,13 @@
               </div>
            <p class="more-info">
             Наша принципиальная позиция проводить таможенное оформление в полном соответствие 
-с российским законодательством в рамках оптимальных затрат и в соответствие 
-с требованиями заказчика.
+            с российским законодательством в рамках оптимальных затрат и в соответствие 
+            с требованиями заказчика.
            </p>
 
           </div>
         </div>
-        <div class="main-item">
+        <div class="main-item" id="navElement">
           <button><div class="btn-wrapper"><div class="plusminus"></div></div></button>
           <div class="item-img"><img src="./img/main-robot-4.png" alt=""></div>
           <div class="item-text">
@@ -168,9 +244,9 @@
             
             <p class="more-info" style="margin-top: 80px;">
               Техническое регулирование не предполагает использования единых схем сертификации. Требования 
-к схеме, порядку оформления сертификатов прописываются в техническом регламенте для конкретной продукции. 
+              к схеме, порядку оформления сертификатов прописываются в техническом регламенте для конкретной продукции. 
 
-Для успешного таможенного оформления импортируемой продукции нужно правильно определить перечень испытаний и разрешительных документов, выбрать подходящую схему сертификации. Наша компания обеспечивает сертификацию и лицензирование товаров при их таможенном оформлении.
+              Для успешного таможенного оформления импортируемой продукции нужно правильно определить перечень испытаний и разрешительных документов, выбрать подходящую схему сертификации. Наша компания обеспечивает сертификацию и лицензирование товаров при их таможенном оформлении.
             </p>
 
             <div class="more-info">
@@ -206,7 +282,7 @@
 
           </div>
         </div>
-        <div class="main-item">
+        <div class="main-item" id="navElement">
           <button><div class="btn-wrapper"><div class="plusminus"></div></div></button>
           <div class="item-img"><img src="./img/main-robot-5.png" alt=""></div>
           <div class="item-text">
@@ -246,42 +322,108 @@
 
       
       <div class="principes">
-        <div class="container-fluid p-0">
-        <div class="principes_item">
+        <div class="container">
+          <div class="about mb-5" style="gap:120px" id="navElement">
+            <h3>О компании</h3>
+            <p class="mb-0">ER Technology – торгово-инжиниринговая компания, специализирующаяся 
+              на поставках промышленного оборудования и компонентов. Наличие коммуникации 
+              с производителями оборудования и доступа к технологической базе, дает возможность оперативного подбора как оригинальных, так и OEM запчастей 
+              и комплектующих, наличие филиалов в различных странах обеспечивает 
+              надежность поставки.</p>
+          </div>
+        </div>
+        <div class="container-fluid">
+        <div class="principes_item pb-5" id="navElement">
           <button><div class="btn-wrapper"><div class="plusminus principesBtn"></div></div></button>
-          <img src="./img/principes1.png" alt="">
+          <img class="float-start" src="./img/principes1.png" alt="" style="max-height: 307px; margin-right: 105px;">
           <div class="principes_item_text">
             <h5>Принципы</h5>
             <p>Быстрая адаптация к меняющимся условиям и проактивная позиция по разработке вариантов закупки, оплаты и доставки товаров, характеризует нашу компанию</p>
           
             <p class="more-info">Благодаря надежности наших решений и росту количества успешно решенных задач, наша компания динамично растет, развивая присутствие в различных отраслях и открывая новые рынки. Не проводя рекламных компаний, количество обращений и запросов увеличивается ежедневно.</p>
-            <p class="more-info">В своей работе мы руководствуемся следующими принципами:</p>
-          </div>
-            <!-- <div class="info-block more-info" >
+            <p class="more-info d-block text-center">В своей работе мы руководствуемся следующими принципами:</p>
+            <div class="info-block more-info" >
               <div class="central-info" style="flex-basis: 32%"><img src="./img/Contract.svg" alt="Contract"><p>Выполнить условия контракта не зависимо от меняющихся условий</p></div>
               <div class="central-info" style="flex-basis: 32%"><img src="./img/employee.png" alt="Contract"><p>Заработать и сохранить доверие потребителя</p></div>
               <div class="central-info" style="flex-basis: 32%"><img src="./img/handshake.svg" alt="handshake"><p>Выстроить долговременные доверительные отношения с нашими клиентами</p></div>
-            </div> -->
+            </div>
+            <p class="more-info mb-5">
+              Делаем все, чтобы заработать репутацию надежного поставщика и партнера.<br>
+Открываем новые пути, видим возможности и реализуем их
+            </p>
+          </div>
         </div>
       </div>
 
-        <div class="container-fluid p-0">
-        <div class="principes_item">
-          <img src="./img/principes2.png" alt="">
+        <div class="container-fluid">
+        <div class="principes_item" id="navElement">
+          <img  class="float-start" src="./img/principes2.png" alt="" style="margin-right: 105px">
           <div class="principes_item_text">
             <h5>Команда</h5>
             <p>Наша команда профессионалов с успешным опытом работы в федеральных компаниях и знанием международного законодательства в сфере регулирования бизнеса и торговли, обеспечивает комплексное решение задач от подбора оптимального логистического решения до поставки оборудования.</p>
             </div>
           </div>
         </div>
+        <div class="container mb-5 mt-5">
+          <div class="about branches" style="gap:198px" id="navElement">
+            <h3>Филиалы</h3>
+            <p class="mb-0 p-0">Сеть надежных партнеров на ключевых международных рынках, это то, что позволяет нам продолжать нашу работу по закупке и доставке продукции на территорию РФ, в том числе подпадающей под запрет со стороны иностранных юрисдикций</p>
+          </div>
+        </div>
+      </div>
+      <div class="branches" style="margin-bottom: 72px;">
+        <div class="container p-0">
+                  <div class="branch">
+                    <p>США</p>
+                    <p>Вашингтон</p>
 
+                  </div>
+                  <div class="branch">
+                    <p>Германия</p>
+                    <p>Дюссельдорф</p>
+
+                  </div>
+                  <div class="branch">
+                    <p>Китай</p>
+                    <p>Гонконг</p>
+
+                  </div>
+                  <div class="branch">
+                    <p>Корея</p>
+                    <p>Сеул</p>
+                  </div>
+                  <div class="branch">
+                    <p>Индия</p>
+                    <p>Мумбаи</p>
+
+                  </div>
+                  <div class="branch">
+                    <p>Казахстан</p>
+                    <p>Алма-Ата</p>
+
+                  </div>
+                  <div class="branch">
+                    <p>Узбекистан</p>
+                    <p>Бишкек</p>
+
+                  </div>
+                  <div class="branch">
+                    <p>Турция</p>
+                    <p>Стамбул</p>
+                  </div>
+        </div>
       </div>
       </div>
   </div>
 </main>
+<footer class="footer">
+
+</footer>
 
 <script src="./script/search.js"></script>
 <script src="./script/accordion.js"></script>
+<script src="./script/scroll.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
