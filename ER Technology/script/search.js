@@ -1,16 +1,23 @@
-//Иконка и инпут
+//Иконки и инпут
 
-const svg = document.querySelector('.header_search svg');
+const svg = document.querySelector('.header_search svg.searchSvg');
+const closeSvg = document.querySelector('.header_search svg.searchClose');
+
 const searchInput = document.querySelector(".search-input");
 const headerLang = document.querySelector('.header_lang');
 
 svg.addEventListener('click', () => {
   svg.classList.toggle('active');
+  closeSvg.classList.toggle('active');
   searchInput.classList.toggle('active');
   headerLang.classList.toggle('displaynone');
 });
 
-//Иконка и инпут
+closeSvg.addEventListener('click', () => {
+  searchInput.value = "";
+})
+
+//Иконки и инпут
 // Логика поиска и поведение блоков
 
 var allItems = document.querySelectorAll(".main-item");
@@ -52,8 +59,9 @@ searchInput.addEventListener("input", function(event) {
         }
         allItems[i].style.display = "block";
         if(!allItems[i].querySelector('.plusminus').classList.contains("active")) {
-          allItems[i].querySelector('button').click();
+          allItems[i].querySelector('a').click();
         }
+        //Открыть блок, если он найден.
         
       }
     }
