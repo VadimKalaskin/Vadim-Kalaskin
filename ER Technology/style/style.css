@@ -149,6 +149,21 @@
   stroke: #3694E7;
 }
 
+button.inlineAncor {
+  background: none;
+  border: none;
+  color: #3694E7;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+button.inlineAncor::after {
+  content: "Подробнее";
+}
+button.inlineAncor.active::after {
+  content: "Скрыть";
+}
+
 svg.searchClose {
   cursor: pointer;
   position: absolute;

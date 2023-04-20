@@ -156,6 +156,20 @@
   }
  }
 }
+button.inlineAncor{
+  background: none;
+  border: none;
+  color: #3694E7;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  &::after{
+    content: "Подробнее";
+  }
+  &.active::after{
+    content: 'Скрыть';
+  }
+}
 svg.searchClose{
   cursor: pointer;
   position: absolute;
