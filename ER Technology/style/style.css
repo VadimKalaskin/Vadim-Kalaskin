@@ -1749,6 +1749,10 @@ svg.searchClose.active {
     padding-left: 160px;
     padding-top: 24px;
   }
+  .principes .principes_item .principes_item_text button.inlineAncor {
+    bottom: 20px;
+    left: 160px;
+  }
   .principes .principes_item .principes_item_text .info-block.more-info {
     flex-wrap: wrap;
     gap: 8px;

@@ -1975,6 +1975,10 @@ svg.searchClose{
     .principes_item_text{
       padding-left: 160px;
       padding-top: 24px;
+      button.inlineAncor{
+        bottom: 20px;
+        left: 160px;
+      }
       .info-block.more-info{
         flex-wrap: wrap;
         gap: 8px;
