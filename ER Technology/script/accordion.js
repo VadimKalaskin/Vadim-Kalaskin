@@ -1,13 +1,14 @@
 const mainItems = document.querySelectorAll('.main-item');
-const buttonPrincipes = document.querySelector('.principesBtn');
-const principes = buttonPrincipes.closest('.container-fluid');
+const buttonPrincipes = document.querySelectorAll('.principesBtn');
+const principes = buttonPrincipes[1].closest('.container-fluid');
 const principesInfo = document.querySelectorAll('.principes .more-info');
 const inlineAncors = document.querySelectorAll('.inlineAncor');
 
-buttonPrincipes.addEventListener('click', (e) => {
+buttonPrincipes.forEach(btn => {
+  btn.addEventListener('click', (e) => {
     e.preventDefault();
     principes.classList.toggle('active');
-    buttonPrincipes.classList.toggle('active');
+    btn.classList.toggle('active');
 
     principesInfo.forEach((block) => {
         block.classList.toggle('active');
@@ -15,6 +16,8 @@ buttonPrincipes.addEventListener('click', (e) => {
       });
 
 });
+})
+
 
 
 
@@ -46,5 +49,7 @@ for(let i = 0; i < mainItems.length; i++) {
         })
     });
 }; // конец for
+
+
 
 
