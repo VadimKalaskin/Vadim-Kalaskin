@@ -158,10 +158,10 @@ button.inlineAncor {
   left: 24px;
 }
 button.inlineAncor::after {
-  content: "Подробнее";
+  content: "Подробнее ▼";
 }
 button.inlineAncor.active::after {
-  content: "Скрыть";
+  content: "Скрыть ▲";
 }
 
 svg.searchClose {
