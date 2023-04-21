@@ -8,6 +8,7 @@
 html{
   scroll-behavior: smooth;
 }
+
 @font-face {
   font-family: 'Onest';
   src: url('../fonts/OnestBlack.woff') format('woff');
@@ -1854,6 +1855,13 @@ svg.searchClose{
       }
       p{
         font-size: 14px;
+      }
+    }
+  }
+  .main{
+    .main-wrapper{
+      .container{
+        overflow-x: hidden;
       }
     }
   }

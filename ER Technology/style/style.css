@@ -1662,6 +1662,9 @@ svg.searchClose.active {
   .main-banner .banner-text p {
     font-size: 14px;
   }
+  .main .main-wrapper .container {
+    overflow-x: hidden;
+  }
   .main-item {
     overflow: visible;
     margin-bottom: 51px;
