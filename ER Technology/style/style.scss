@@ -211,6 +211,11 @@ svg.searchClose{
   position: relative;
   display: flex;
   justify-content: center;
+  background-image: url(../img/Header-banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 826px;
   img{
     width: 100%;
     height: auto;
@@ -869,6 +874,9 @@ svg.searchClose{
     justify-content: flex-start;
     gap: 30px;
   }
+  .main-banner {
+    min-height: 756px;
+  }
   .principes .principes_item{
     img{
       margin-right: 85px;
@@ -888,7 +896,9 @@ svg.searchClose{
 }
 
 @media all and (max-width: 1200px) {
-
+  .main-banner {
+    min-height: 779px;
+  }
   .footer .footer_uls{
     padding-left: 64px;
     ul{
@@ -1100,6 +1110,9 @@ svg.searchClose{
 }
 
 @media all and (max-width: 992px) {
+  .main-banner {
+    min-height: 623px;
+  }
   .principes .container .about.branches{
     flex-direction: column;
     gap: 24px;
@@ -1446,6 +1459,9 @@ svg.searchClose{
 }
 
 @media all and (max-width: 767px) {
+  .main-banner {
+    min-height: 467px;
+  }
   .principes .container .about.branches{
     flex-direction: column;
     gap: 24px;
