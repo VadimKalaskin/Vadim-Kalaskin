@@ -274,6 +274,13 @@ svg.searchClose{
       }
     }
   }
+  &.сustoms_clearance{
+    .info-block.more-info{
+      div{
+        flex-basis: 49%;
+      }
+    }
+  }
 
   .item-img{
     img{
@@ -345,10 +352,6 @@ svg.searchClose{
   font-size: 18px;
   line-height: 23px;
   padding: 45px 110px 56px 110px;
-  // &>p{
-  //   padding-left: 24px;
-  //   padding-right: 24px;
-  // }
 
   h4{
     font-size: 32px;
@@ -406,11 +409,11 @@ svg.searchClose{
   padding: 24px;
   overflow: visible;
   div{
-    // flex-basis: 33%;
+    flex-basis: 32%;
+    min-height: 216px;
     box-shadow: 0px 3.61239px 24.3836px rgba(21, 21, 21, 0.08);
     border-radius: 8px;
     padding: 24px;
-
   }
   div.central-info{
     display: flex;
@@ -419,7 +422,6 @@ svg.searchClose{
     flex-direction: column;
     text-align: center;
     img{
-      // margin-bottom: 18px;
       margin: 0 auto 18px;
     }
   }
@@ -605,6 +607,7 @@ svg.searchClose{
           border: 2px solid rgba(255, 255, 255, 0.2);
           border-radius: 8px;
           box-shadow: none;
+          flex-basis: 32%;
           p{
             font-weight: 700;
             font-size: 18px;
@@ -681,6 +684,7 @@ svg.searchClose{
     padding-left: 77px;
     display: flex;
     padding-top: 46px;
+    background-color: #133457;
     ul{
       padding-left: 22px;
     }
@@ -709,6 +713,10 @@ svg.searchClose{
     grid-template-rows: 1fr 236px;
 
     .footer_map {
+      background-image: url(../img/branches/footer_map.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
       img{
         max-width: 100%;
       }
@@ -726,6 +734,7 @@ svg.searchClose{
         width: 100%;
         justify-content: flex-end;
         flex-direction: column;
+        background-color: #357AB6;
         img{
           max-height: 80px;
           max-width: 369px;
@@ -1015,9 +1024,20 @@ svg.searchClose{
   .navbar-expand-sm .navbar-nav .nav-link {
     font-size: 14px;
   }
-  .footer .footer_wrapper .footer_info-wrapper .footer_logo img{
-    width: 305px;
-    height: 65px;
+  .footer .footer_wrapper{
+    .footer_map{
+      height: 559px;
+    }
+    .footer_info{
+      height: 559px;
+    }
+    .footer_info-wrapper{
+      
+      .footer_logo img{
+        width: 305px;
+        height: 65px;
+      } 
+    }
   }
   .footer .footer_wrapper .footer_info-wrapper .footer_logo{
     align-items: center;
@@ -1183,7 +1203,9 @@ svg.searchClose{
 }
   .branches{
     margin-bottom: 56px;
-    gap: 24px !important;
+    .container{
+      gap: 16px !important;
+    }
   }
 
   .principes .container .about h3{
@@ -1202,6 +1224,7 @@ svg.searchClose{
   .branches .container .branch{
     height: 206px;
     padding: 24px;
+    width: 48%;
     p:first-child{
       font-size: 18px;
       line-height: 26px;
@@ -1212,6 +1235,33 @@ svg.searchClose{
       line-height: 56px;
     }
   }
+  .branches{
+    .branch:nth-child(1){
+      background-image: linear-gradient(#3694E7 0% 30%, transparent 70%), url('../img/branches/medium/usa.jpg');
+    }
+    .branch:nth-child(2){
+      background-image: linear-gradient(#3694E7 0% 30%, transparent 70%), url('../img/branches/medium/germany.jpg');
+    }
+    .branch:nth-child(3){
+      background-image: linear-gradient(#3694E7 0% 30%, transparent 70%), url('../img/branches/medium/china.jpg');
+    }
+    .branch:nth-child(4){
+      background-image: linear-gradient(#3694E7 0% 30%, transparent 70%), url('../img/branches/medium/korea.jpg');
+    }
+    .branch:nth-child(5){
+      background-image: linear-gradient(#3694E7 0% 30%, transparent 70%), url('../img/branches/medium/india.jpg');
+    }
+    .branch:nth-child(6){
+      background-image: linear-gradient(#3694E7 0% 30%, transparent 70%), url('../img/branches/medium/kazakstan.jpg');
+    }
+    .branch:nth-child(7){
+      background-image: linear-gradient(#3694E7 0% 30%, transparent 70%), url('../img/branches/medium/uzbekistan.jpg');
+    }
+    .branch:nth-child(8){
+      background-image: linear-gradient(#3694E7 0% 30%, transparent 70%), url('../img/branches/medium/turkey.jpg');
+    }
+  }
+  
   .item-text{
     padding-left: 24px !important;
     padding-right: 24px !important;
@@ -1299,6 +1349,7 @@ svg.searchClose{
 
       .footer_map{
         grid-area: footer-map;
+        height: 600px;
       }
       .footer_uls{
         grid-area: footer-uls;
@@ -1325,6 +1376,7 @@ svg.searchClose{
           flex-direction: column;
           padding: 40px 62px 32px;
           max-width: 623px;
+          height: 600px;
   
           .footer_address {
             font-weight: 600;
@@ -1655,6 +1707,7 @@ svg.searchClose{
 
       .footer_map{
         grid-area: footer-map;
+        height: 450px;
       }
       .footer_uls{
         grid-area: footer-uls;
@@ -1681,6 +1734,8 @@ svg.searchClose{
           flex-direction: column;
           padding: 30px 24px;
           max-width: 623px;
+          height: 450px;
+
   
           .footer_address {
             font-weight: 600;
