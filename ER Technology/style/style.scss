@@ -711,16 +711,18 @@ svg.searchClose{
     display: grid;
     grid-template-columns: 1fr 1.25fr;
     grid-template-rows: 1fr 236px;
-
-    .footer_map {
-      background-image: url(../img/branches/footer_map.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      img{
-        max-width: 100%;
+    .footer_map-wrapper{
+      background-color: #133457;
+      .footer_map {
+        background-image: url(../img/branches/footer_map.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 676px;
+        max-width: 777px;
       }
     }
+    
 
     .footer_info-wrapper {
       background-color:#357AB6;
@@ -745,6 +747,7 @@ svg.searchClose{
         flex-direction: column;
         padding: 48px 80px 5px 41px;
         max-width: 623px;
+        height: 676px;
 
         .footer_address {
           font-weight: 600;
@@ -1025,14 +1028,16 @@ svg.searchClose{
     font-size: 14px;
   }
   .footer .footer_wrapper{
+    .footer_map-wrapper{
     .footer_map{
       height: 559px;
     }
-    .footer_info{
-      height: 559px;
-    }
+  }
+    
     .footer_info-wrapper{
-      
+      .footer-info{
+        height: 559px;
+      }
       .footer_logo img{
         width: 305px;
         height: 65px;
@@ -1346,11 +1351,12 @@ svg.searchClose{
       grid-template-rows: 1fr 230px;
       grid-template-areas: 'footer-info footer-map'
                             'footer-uls footer-uls';
-
-      .footer_map{
-        grid-area: footer-map;
-        height: 600px;
-      }
+        .footer_map-wrapper{
+          .footer_map{
+           grid-area: footer-map;
+           height: 600px;
+         }
+       }
       .footer_uls{
         grid-area: footer-uls;
       }
@@ -1704,11 +1710,13 @@ svg.searchClose{
       grid-template-rows: 1fr 230px;
       grid-template-areas: 'footer-info footer-map'
                             'footer-uls footer-uls';
-
-      .footer_map{
-        grid-area: footer-map;
-        height: 450px;
+      .footer_map-wrapper{
+        .footer_map{
+          grid-area: footer-map;
+          height: 450px;
+        }
       }
+      
       .footer_uls{
         grid-area: footer-uls;
       }
