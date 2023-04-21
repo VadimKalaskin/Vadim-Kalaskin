@@ -1268,6 +1268,9 @@ svg.searchClose.active {
   .principes .container .about h3 {
     flex: 0;
   }
+  .item-text .more-info.active {
+    overflow: visible;
+  }
   .main-banner .banner-text {
     width: 90%;
     margin: 0 auto;
