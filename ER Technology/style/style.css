@@ -7,6 +7,10 @@
   font-weight: 400;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "Onest";
   src: url("../fonts/OnestBlack.woff") format("woff");
@@ -1001,6 +1005,9 @@ svg.searchClose.active {
   }
 }
 @media all and (max-width: 992px) {
+  .navbar-brand img {
+    height: 75px;
+  }
   .main-banner {
     min-height: 623px;
   }
@@ -1634,5 +1641,12 @@ svg.searchClose.active {
     left: 0;
     width: 24px;
     height: 24px;
+  }
+}
+@media all and (max-width: 575px) {
+  .navbar-brand img {
+    height: 34px;
+    width: auto;
+    margin: 16px;
   }
 }/*# sourceMappingURL=style.css.map */

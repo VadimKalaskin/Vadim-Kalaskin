@@ -17,10 +17,17 @@
     <header class="header">
       <div class="container">
         <nav class="navbar navbar-expand-lg p-0">
-          <div class="container-fluid">
-            <a class="navbar-brand p-0" href="#">
-              <img src="./img/Header-logo.png" alt="ER Technology">
+          <div class="container-fluid p-0">
+            <a class="navbar-brand p-0" href="/">
+               <picture>
+                <source media="(max-width: 575px)" srcset="./img/Header-logo-mobile.png" />
+                <source media="(min-width: 576px)" srcset="./img/Header-logo.png" />
+                <img src="./img/Header-logo.png" alt="ER Technology">
+              </picture>
             </a>
+
+
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -82,7 +89,6 @@
       <div class="main-wrapper">
         <div class="container-fluid p-0">
           <div class="main-banner">
-            <!-- <img src="./img/Header-banner.jpg" alt=""> -->
             <div class="banner-text">
               <h3>ER technology</h3>
               <p>Холдинговая компания импортных и экспортных операций.<br>
@@ -91,7 +97,13 @@
                 с поставщиком до ввоза и таможенного оформления товара на территории РФ
                 Доставляем на склад заказчика продукцию, оформленную в полном соответствие
                 с требованиями российского таможенного законодательства и в сжатые сроки.</p>
-              <button>Подробнее</button>
+                <script>
+                  function scrollFromBanner () {
+                  const elToScroll = document.querySelector('.principes');
+                  elToScroll.scrollIntoView();
+                  }
+                </script>
+              <button onclick="scrollFromBanner()">Подробнее</button>
             </div>
           </div>
         </div>
@@ -501,8 +513,8 @@
     </footer>
 
     <script src="./script/search.js"></script>
-    <script type="module" src="./script/accordion.js"></script>
-    <script src="./script/scroll.js"></script>
+    <script src="./script/accordion.js"></script>
+    <script type="module" src="./script/scroll.js"></script>
     <script src="./script/changeButtons.js"></script>
 
 

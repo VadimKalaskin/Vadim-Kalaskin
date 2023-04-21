@@ -5,6 +5,9 @@
   font-family: 'Onest', system-ui, -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
 }
+html{
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: 'Onest';
   src: url('../fonts/OnestBlack.woff') format('woff');
@@ -1112,6 +1115,11 @@ svg.searchClose{
 }
 
 @media all and (max-width: 992px) {
+  .navbar-brand{
+    img{
+      height: 75px;
+    }
+  }
   .main-banner {
     min-height: 623px;
   }
@@ -1824,4 +1832,14 @@ svg.searchClose{
     }
   }
 
+}
+
+@media all and (max-width: 575px) {
+  .navbar-brand{
+    img{
+      height: 34px;
+      width: auto;
+      margin: 16px;
+    }
+  }
 }
